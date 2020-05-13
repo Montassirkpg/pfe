@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "903486025091",
+    "firebase_url": "https://fluttergameapp.firebaseio.com",
+    "project_id": "fluttergameapp",
+    "storage_bucket": "fluttergameapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903486025091:android:ebe46adbe4bf0b556c1ab6",
+        "android_client_info": {
+          "package_name": "com.example.fluttergameapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903486025091-7000krq6e93lh0mhcpta5phv24tp3n00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fluttergameapp",
+            "certificate_hash": "aedf7d00d054f7ea7a690953d113de2ed05eb7a9"
+          }
+        },
+        {
+          "client_id": "903486025091-pudkorilihkthe07lgjqlha17uvetdic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqNIM0eTT-lziQ--RG-uTfAWj11fL7vmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903486025091-pudkorilihkthe07lgjqlha17uvetdic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
