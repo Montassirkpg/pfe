@@ -1,9 +1,8 @@
-import 'package:fluttergameapp/screens/home.dart';
+
 import 'package:fluttergameapp/screens/signup.dart';
 import 'package:fluttergameapp/widgets/common.dart';
 import 'package:fluttergameapp/widgets/loading.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import '../provider/user_provider.dart';
 
@@ -46,7 +45,6 @@ class _LoginState extends State<Login> {
                     child: ListView(
                       children: <Widget>[
                         SizedBox(height: 40,),
-
                         Padding(
                           padding:
                               const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
@@ -119,7 +117,6 @@ class _LoginState extends State<Login> {
                                   if(_formKey.currentState.validate()){
                                     if(!await user.signIn(_email.text, _password.text))
                                       _key.currentState.showSnackBar(SnackBar(content: Text("Sign in failed")));
-                                      //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
                                   }
                                 },
                                 minWidth: MediaQuery.of(context).size.width,

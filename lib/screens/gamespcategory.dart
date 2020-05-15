@@ -5,22 +5,22 @@ import 'package:fluttergameapp/screens/racinggame.dart';
 import 'package:fluttergameapp/screens/roleplaygames.dart';
 import 'package:fluttergameapp/screens/simgames.dart';
 import 'package:fluttergameapp/screens/sportsgames.dart';
-class categorygames extends StatelessWidget {
+class categorygames extends StatefulWidget {
+  @override
+  _categorygamesState createState() => _categorygamesState();
+}
+
+class _categorygamesState extends State<categorygames> {
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(3, 4, 94, 1),
-        title: Text('Availble Categories',style: TextStyle(color: Colors.white,fontSize: 20),textAlign: TextAlign.end,),
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: new IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: ()=>Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => HomePage())),),
-          )
-        ],
-      ),
+    return WillPopScope(
+      onWillPop: _Back,
+      child:
+     Scaffold(
       body: Column(
         children: <Widget>[
+          Divider(),
+          Divider(),
           new FlatButton(onPressed: (){
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Actiongame()));
           },
@@ -47,6 +47,10 @@ class categorygames extends StatelessWidget {
            child: Text("Sport games",style: TextStyle(color:Color.fromRGBO(116, 0, 1, 1),fontSize: 30),textAlign: TextAlign.center,))
         ],
       ),
-    );
+    ));
+  }
+
+  Future<bool> _Back() {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 }

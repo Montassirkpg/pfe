@@ -3,6 +3,7 @@ import 'package:fluttergameapp/provider/appProvider.dart';
 import 'package:fluttergameapp/screens/games.dart';
 import 'package:fluttergameapp/screens/home.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 class DetailPage extends StatefulWidget {
   @override
   _DetailPageState createState() => _DetailPageState();
@@ -92,10 +93,14 @@ class _DetailPageState extends State<DetailPage> {
                           width: 40.0,
                           decoration: BoxDecoration(
                             color: Colors.grey.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(20.0)
+                            borderRadius: BorderRadius.circular(20.0),
                           ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
+                          child: new IconButton(
+                            icon: Icon(
+                              Icons.play_arrow,
+                              color: Color.fromRGBO(255, 0, 0, 1),
+                            ),
+                            onPressed: _lunchURL,
                           ),
                         )
                       ],
@@ -170,5 +175,14 @@ class _DetailPageState extends State<DetailPage> {
         ]
       ),
     );
+  }
+
+  void _lunchURL() async{
+    AppProvider appProvider2 = Provider.of<AppProvider>(context,listen : false);
+    if(await canLaunch(appProvider2.currentProduct.videourl)){
+      await launch(appProvider2.currentProduct.videourl);
+    }else{
+      throw 'Could not launch the link';
+    }
   }
 }

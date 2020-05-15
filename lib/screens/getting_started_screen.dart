@@ -1,4 +1,4 @@
-import 'dart:async';
+/*import 'dart:async';
 
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
   int _currentPage = 0;
   final PageController _pageController = PageController(initialPage: 0);
 
-  @override
+ @override
   void initState() {
     super.initState();
     Timer.periodic(Duration(seconds: 5), (Timer timer) {
@@ -41,11 +41,11 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
     _pageController.dispose();
   }
 
-  _onPageChanged(int index) {
+  /*_onPageChanged(int index) {
     setState(() {
       _currentPage = index;
     });
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
                     PageView.builder(
                       scrollDirection: Axis.horizontal,
                       controller: _pageController,
-                      onPageChanged: _onPageChanged,
+                      //onPageChanged: _onPageChanged,
                       itemCount: slideList.length,
                       itemBuilder: (ctx, i) => SlideItem(i),
                     ),
@@ -141,4 +141,4 @@ class _GettingStartedScreenState extends State<GettingStartedScreen> {
       ),
     );
   }
-}
+}*/

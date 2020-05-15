@@ -25,7 +25,10 @@ class _GamesState extends State<Games> {
     Future<void> _refreshList() async{
       getProducts(appProvider);
     }
-     return Scaffold(
+     return WillPopScope(
+      onWillPop: _Back,
+      child:
+     Scaffold(
       body: ListView.builder(
         itemCount: appProvider.productList.length,
         itemBuilder:(BuildContext context,int index)=> Container(
@@ -86,6 +89,10 @@ class _GamesState extends State<Games> {
         ) 
       )
       
-    );
+    ));
+  }
+
+  Future<bool> _Back() async{
+    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 }

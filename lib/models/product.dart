@@ -6,6 +6,7 @@ class Product{
   static const Name = "name";
   static const Price = "price";
   static const Reviews = "reviews";
+  static const Videourl ="videourl";
   static const Brand = "brand";
   static const Quantity = "quantity";
   static const Plattform = "plattform";
@@ -18,6 +19,7 @@ class Product{
   String _name;
   String _brand;
   String _picture;
+  String _videourl;
   double _price;
   double _reviews;
   int _quantity;
@@ -26,6 +28,7 @@ class Product{
 
   String get name => _name;
   String get brand => _brand;
+  String get videourl => _videourl;
   String get id => _id;
   String get category => _category;
   String get picture => _picture;
@@ -39,6 +42,7 @@ class Product{
     _id = data[ID];
     _name = data[Name];
     _category = data[Category];
+    _videourl = data[Videourl];
     _brand = data[Brand];
     _price = data[Price];
     _reviews = data[Reviews];
@@ -56,6 +60,7 @@ class Product{
       'picture': _picture,
       'price': _price,
       'reviews': _reviews,
+      'videourl': _videourl,
       'quantity': _quantity,
       'plattform': _plattform,
     };

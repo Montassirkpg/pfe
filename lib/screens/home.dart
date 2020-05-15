@@ -2,25 +2,12 @@
 import 'dart:io';
 
 import 'package:carousel_pro/carousel_pro.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fluttergameapp/components/horizontal_listview.dart';
-import 'package:fluttergameapp/models/product.dart';
-import 'package:fluttergameapp/models/userdeat.dart';
-import 'package:fluttergameapp/provider/appProvider.dart';
-import 'package:fluttergameapp/provider/user_provider.dart';
 import 'package:fluttergameapp/screens/about.dart';
-import 'package:fluttergameapp/screens/account.dart';
 import 'package:fluttergameapp/screens/games.dart';
-import 'package:fluttergameapp/screens/gamesdetails.dart';
 import 'package:fluttergameapp/screens/gamespcategory.dart';
-import 'package:fluttergameapp/widgets/common.dart';
-import 'package:fluttergameapp/widgets/custom_app_bar.dart';
-import 'package:fluttergameapp/widgets/featured_product.dart';
-import 'package:fluttergameapp/widgets/product_card.dart';
 import 'package:fluttergameapp/widgets/search.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'login.dart';
@@ -31,13 +18,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static bool ishomepage= true;
- @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    ishomepage = true;
-  }
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -109,7 +89,6 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: (){
                 FirebaseAuth.instance.signOut().then((value){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
                 });
               },
               child: ListTile(
@@ -118,13 +97,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
              Divider(),
-                    InkWell(
-            onTap: (){},
-                      child: ListTile(
-              title: Text('Settings'),
-              leading: Icon(Icons.settings, color: Colors.blue),
-            ),
-          ),
                     InkWell(
             onTap: (){
               Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => About()));
@@ -143,7 +115,7 @@ class _HomePageState extends State<HomePage> {
           Center(
             child: Stack(children: <Widget>[
               Container(
-                 height: 500,
+                 height: 560,
                  width: 600,
                  child: new Carousel(
                   images: [
@@ -157,10 +129,6 @@ class _HomePageState extends State<HomePage> {
       animationCurve: Curves.fastOutSlowIn,
       animationDuration: Duration(milliseconds: 2000),
       )
-      ),
-      Container(
-        child: Text("For more option tap on the icon menu",style: TextStyle(color: Colors.orange),),
-        alignment: Alignment.bottomCenter
       ),
       ]
     ),

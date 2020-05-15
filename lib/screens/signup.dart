@@ -1,15 +1,10 @@
-import 'dart:async';
 
-import 'package:fluttergameapp/db/auth.dart';
 import 'package:fluttergameapp/provider/user_provider.dart';
 import 'package:fluttergameapp/screens/login.dart';
 import 'package:fluttergameapp/widgets/common.dart';
 import 'package:fluttergameapp/widgets/loading.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-import '../db/users.dart';
 import 'home.dart';
 
 class SignUp extends StatefulWidget {
@@ -139,13 +134,13 @@ class _SignUpState extends State<SignUp> {
                                     return null;
                                   },
                                 ),
-                                trailing: IconButton(
+                              /*  trailing: IconButton(
                                     icon: Icon(Icons.remove_red_eye),
                                     onPressed: () {
                                       setState(() {
                                         hidePass = false;
                                       });
-                                    }),
+                                    }),*/
                               ),
                             ),
                           ),
@@ -191,29 +186,7 @@ class _SignUpState extends State<SignUp> {
                                   style: TextStyle(color: Colors.black, fontSize: 16),
                                 ))),
 
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text("Or sign up with", style: TextStyle(fontSize: 18,color: Colors.grey),),
-                              ),
-                              Padding(
-                                padding:
-                                const EdgeInsets.fromLTRB(14.0, 8.0, 14.0, 8.0),
-                                child: Material(
-                                    child: MaterialButton(
-                                        onPressed: () async{
-                                        },
-                                        child: Image.asset("images/googlee.jpg", width: 30,)
-                                    )),
-                              ),
-                            ],
-                          ),
-                        ),
+                      
                       ],
                     )),
               ),

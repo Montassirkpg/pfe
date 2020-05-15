@@ -13,11 +13,7 @@ class _ActiongameState extends State<Actiongame> {
   
   @override
   Widget build(BuildContext context) {
-     @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
+
     return WillPopScope(
       onWillPop: _onBackPressed,
 

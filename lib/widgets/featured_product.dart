@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'featured_cart.dart';
+
 
 class FeaturedProducts extends StatefulWidget {
   @override
