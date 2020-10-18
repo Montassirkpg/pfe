@@ -4,13 +4,14 @@ import 'package:fluttergameapp/screens/home.dart';
 import 'package:fluttergameapp/screens/login.dart';
 import 'package:fluttergameapp/screens/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttergameapp/widgets/loading.dart';
 import 'package:provider/provider.dart';
 import 'provider/user_provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MultiProvider(providers: [
-    ChangeNotifierProvider.value(value: UserProvider.initialize()),
+   ChangeNotifierProvider.value(value: UserProvider.initialize()),
     ChangeNotifierProvider.value(value: AppProvider()),
     ChangeNotifierProvider.value(value: null)
   ],
@@ -29,14 +30,11 @@ class ScreensController extends StatelessWidget {
     final user = Provider.of<UserProvider>(context);
     switch(user.status){
       case Status.Uninitialized:
-        return Splash();
-      case Status.Unauthenticated:
-        //return GettingStartedScreen();
       case Status.Authenticating:
-        return Login();
+        return LoginScreen();
      case Status.Authenticated:
-        return HomePage();
-      default: return Login();
+        return LoginScreen();
+      default: return LoginScreen();
     }
   }
 }

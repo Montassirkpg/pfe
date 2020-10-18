@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 import 'package:fluttergameapp/models/slide.dart';
 
@@ -43,4 +43,4 @@ class SlideItem extends StatelessWidget {
       ],
     );
   }
-}
+}*/

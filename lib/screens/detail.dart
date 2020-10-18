@@ -38,11 +38,11 @@ class _DetailPageState extends State<DetailPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Icon(Icons.arrow_forward_ios, color: Colors.white.withOpacity(0.3), size: 11.0),
-                    Icon(Icons.arrow_forward_ios, color: Colors.white.withOpacity(0.5), size: 12.0),
-                    Icon(Icons.arrow_forward_ios, color: Colors.white.withOpacity(0.7), size: 13.0),
-                    Icon(Icons.arrow_forward_ios, color: Colors.white.withOpacity(0.9), size: 14.0),
-                    RotatedBox(child: Icon(Icons.local_airport, color: Colors.white), quarterTurns: 1),
+                    Icon(Icons.stars, color: Colors.white.withOpacity(0.3), size: 11.0),
+                    Icon(Icons.stars, color: Colors.white.withOpacity(0.5), size: 12.0),
+                    Icon(Icons.stars, color: Colors.white.withOpacity(0.7), size: 13.0),
+                    Icon(Icons.stars, color: Colors.white.withOpacity(0.9), size: 14.0),
+                    RotatedBox(child: Icon(Icons.gamepad, color: Colors.white), quarterTurns: 1),
                   ],
                 ),
               )
@@ -89,7 +89,7 @@ class _DetailPageState extends State<DetailPage> {
                           ],
                         ),
                         Container(
-                          height: 60.0,
+                          height: 40.0,
                           width: 40.0,
                           decoration: BoxDecoration(
                             color: Colors.grey.withOpacity(0.1),

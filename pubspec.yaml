@@ -31,6 +31,9 @@ dependencies:
   intl: ^0.16.1
   flutter_typeahead: ^1.8.0
   auto_size_text: ^2.1.0
+  flutter_spinkit: ^4.1.2+1
+  simple_animations: ^2.2.1
+  page_transition: ^1.1.5
   uuid:
   firebase_database:
   provider: ^4.0.5+1
@@ -90,6 +93,7 @@ flutter:
     - images/image22.jpg
     - images/image33.jpg
     - images/logo2.png
+    - images/one.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

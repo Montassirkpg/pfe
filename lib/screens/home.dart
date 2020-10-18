@@ -89,6 +89,7 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: (){
                 FirebaseAuth.instance.signOut().then((value){
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                 });
               },
               child: ListTile(
@@ -106,7 +107,6 @@ class _HomePageState extends State<HomePage> {
               leading: Icon(Icons.help, color: Colors.green),
             ),
           ),
-
           ],
         ),
       ),
